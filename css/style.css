@@ -1,0 +1,144 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+:root {
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+
+	--very-pale-blue: hsl(225, 100%, 98%);
+	--desaturated-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 47%, 23%);
+}
+
+html {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: "Red Hat Display", sans-serif;
+	background-color: var(--pale-blue);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	text-align: center;
+	font-size: 1rem;
+	color: var(--desaturated-blue);
+	background-image: url("./../images/pattern-background-desktop.svg");
+	background-size: contain;
+	background-position: 0px -100px;
+	background-repeat: no-repeat;
+}
+
+main {
+	background-color: var(--very-pale-blue);
+	max-width: 22rem;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 0px 1px 15px -2px hsl(223, 47%, 23%, 0.2);
+	margin: 1rem;
+}
+
+.hero-img img {
+	width: 100%;
+}
+
+.card-content {
+	padding: 2rem;
+}
+
+h1,
+h2 {
+	color: var(--dark-blue);
+	font-weight: 900;
+}
+
+h1 {
+	font-size: 1.5rem;
+	margin-bottom: 1.25rem;
+	font-weight: 900;
+}
+
+p {
+	font-size: 0.85rem;
+	line-height: 1.5;
+}
+
+.plan-info {
+	display: flex;
+	align-items: center;
+	margin: 2rem 0;
+	padding: 0 1rem;
+}
+
+.btn-link {
+	margin-left: auto;
+	color: var(--bright-blue);
+	font-size: 0.75rem;
+	font-weight: 900;
+}
+
+.btn-link:hover {
+	text-decoration: none;
+	filter: brightness(2);
+}
+
+.plan-info img {
+	max-width: 2.5rem;
+	margin-right: 1rem;
+}
+
+button {
+	display: block;
+	width: 100%;
+	border: none;
+	background-color: transparent;
+	height: 2.5rem;
+	font-weight: 700;
+	font-size: 0.8rem;
+	cursor: pointer;
+}
+
+.plan-info h2 {
+	font-size: 0.85rem;
+	margin-bottom: 5px;
+}
+
+.btn-primary {
+	background-color: var(--bright-blue);
+	color: var(--very-pale-blue);
+	border-radius: 10px;
+	margin-bottom: 0.85rem;
+}
+
+.btn-primary:hover {
+	filter: brightness(2);
+	box-shadow: 0px 4px 15px 2px hsl(223, 47%, 23%, 0.2);
+}
+
+.btn-secondary {
+	color: var(--desaturated-blue);
+	display: inline-block;
+	width: auto;
+}
+
+.btn-secondary:hover {
+	color: var(--dark-blue);
+}
+
+@media (max-width: 790px) {
+	body {
+		background-image: url("./../images/pattern-background-mobile.svg");
+	}
+}
+
+@media (max-width: 560px) {
+	body {
+		background-position: 0px 0px;
+	}
+}
